@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { supabase } from './services/supabaseClient'
+import { supabase } from '../../services/supabaseClient'
 
 function KitDetail() {
   const { kit_id } = useParams()
