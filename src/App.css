@@ -1,43 +1,71 @@
-/* Light Mode */
+/* ---------------------------------
+   LIGHT MODE
+---------------------------------- */
 body {
   background-color: #ffffff;
   color: #111111;
 }
 
-/* Dark Mode */
+/* ---------------------------------
+   DARK MODE
+---------------------------------- */
 body.dark {
   background-color: #1e1e1e;
   color: #e6e6e6;
 }
 
-/* Main container */
+/* Make ALL text white in dark mode */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark p,
+body.dark th,
+body.dark td,
+body.dark label {
+  color: #ffffff;
+}
+
+/* Fix table borders in dark mode */
+body.dark table,
+body.dark th,
+body.dark td {
+  border-color: #555;
+}
+
+/* ---------------------------------
+   MAIN CONTAINER
+---------------------------------- */
 .App {
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   position: relative;
 }
 
-/* Dark Mode Toggle */
-.dark-toggle-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
+/* ---------------------------------
+   DARK MODE TOGGLE (fixed position)
+---------------------------------- */
 .dark-toggle {
+  position: absolute;
+  top: 12px;
+  right: 20px;
   padding: 8px 14px;
   background-color: #444;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  z-index: 999;
 }
 
 .dark-toggle:hover {
   background-color: #666;
 }
 
-/* Add Kit Button */
+/* ---------------------------------
+   ADD KIT BUTTON
+---------------------------------- */
 .add-kit-btn {
   margin-bottom: 20px;
   padding: 8px 14px;
@@ -52,7 +80,9 @@ body.dark {
   background-color: #1e7e34;
 }
 
-/* Edit Button */
+/* ---------------------------------
+   EDIT BUTTON
+---------------------------------- */
 .edit-btn {
   background-color: #ff9800;
   color: white;
@@ -66,7 +96,9 @@ body.dark {
   background-color: #e68900;
 }
 
-/* Delete Button */
+/* ---------------------------------
+   DELETE BUTTON
+---------------------------------- */
 .delete-btn {
   background-color: #d9534f;
   color: white;
@@ -80,7 +112,9 @@ body.dark {
   background-color: #c9302c;
 }
 
-/* Table */
+/* ---------------------------------
+   TABLE
+---------------------------------- */
 table {
   margin: 20px auto;
   border-collapse: collapse;
@@ -129,7 +163,9 @@ body.dark tr:hover {
   background-color: #2a2a2a;
 }
 
-/* General Buttons */
+/* ---------------------------------
+   GENERAL BUTTONS
+---------------------------------- */
 button {
   padding: 6px 12px;
   background-color: #0078d4;
@@ -151,8 +187,11 @@ body.dark button:hover {
   background-color: #0078d4;
 }
 
-/* Form Inputs */
-form input, form select {
+/* ---------------------------------
+   FORM INPUTS
+---------------------------------- */
+form input,
+form select {
   width: 100%;
   padding: 8px;
   margin: 8px 0 16px 0;
@@ -160,10 +199,9 @@ form input, form select {
   border-radius: 4px;
 }
 
-/* -----------------------------
+/* ---------------------------------
    MODAL STYLING
-   ----------------------------- */
-
+---------------------------------- */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -210,4 +248,75 @@ body.dark .modal-box {
 
 .modal-confirm:hover {
   background-color: #c9302c;
+}
+
+/* ---------------------------------
+   NAV BAR
+---------------------------------- */
+
+.navbar {
+  width: 100%;
+  background-color: #0078d4; /* Microsoft blue */
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Left side logo */
+.nav-logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Right side links */
+.nav-right {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #cce7ff; /* lighter blue */
+}
+
+/* ---------------------------------
+   DARK MODE NAV BAR
+---------------------------------- */
+
+body.dark .navbar {
+  background-color: #005a9e; /* darker blue */
+}
+
+body.dark .nav-link:hover {
+  color: #e0f0ff;
+}
+
+body.dark .nav-logo {
+  color: white;
+}
+
+/* Icon next to PATS */
+.pats-icon {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Align logo + icon */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
